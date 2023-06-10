@@ -1,0 +1,25 @@
+﻿@page
+@model AbbyWeb.Pages.Categories.CreateModel
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form method="post">ss
+                <div class="mb-3 text-capitalize text-center text-primary">
+                    <h1>Create Category</h1>
+                </div>
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="category.Name" class="form-label">Category Name</label>
+                    <input asp-for="category.Name" class="form-control">
+                    <span asp-validation-for="@Model.category.Name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="category.DisplayOrder" class="form-label">Display Order</label>
+                    <input asp-for="category.DisplayOrder" class="form-control">
+                    <span asp-validation-for="@Model.category.DisplayOrder" class="text-danger"></span>
+                </div>
+                <button type="submit" class="btn btn-primary mb-3 align-content-center">Create</button>
+            </form>
+        </div>
+    </div>
+</div>
